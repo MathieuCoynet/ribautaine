@@ -96,7 +96,10 @@
   </div>
 </div>
 
-<h1 class="carte" style="text-align: center;background-color:black;">Notre carte</h1>
+<div style="text-align: center;background-color:black;">
+<h1 class="carte" class="heading">Notre carte :</h1>
+    <button type="button" class="button button-primary" onclick="toggle_div(this,'menu');" style="color:black; background-color:#fff;margin: 20px;padding: 10px;text-align:  center; "><strong>Masquer  la carte?</strong></button>
+</div>
 <div id="menu" class="content-block food-menu-block">
   <div class="food-menu-block-inner container">
     <div class="clear">
@@ -759,6 +762,18 @@
   </div>
 </div>
 
+<script type="text/javascript">
+function toggle_div(bouton, menu) { 
+  var div = document.getElementById(menu); 
+  if(div.style.display=="none"){
+    div.style.display = "block"; 
+    bouton.innerHTML = "Masquer la carte"; 
+  } else { 
+    div.style.display = "none"; 
+    bouton.innerHTML = "Dérouler la carte"; 
+  }
+}
+</script>
 <script src="js/vendor/wow.js"></script>
 <script src="js/vendor/webfontloader.js"></script>
 <script src="js/default.js"></script>
